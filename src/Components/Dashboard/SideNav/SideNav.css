@@ -1,0 +1,110 @@
+.side-nav {
+  position: fixed; /* Make the side navigation fixed */
+  top: 0;
+  left: 0;
+  width: 200px;
+  max-width: 280px; /* Set maximum width */
+  height: 100vh; /* Ensure it spans the full height of the screen */
+  background-color: #151718;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between top and bottom containers */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo-container {
+  padding: 10px 0;
+}
+
+.logo-text {
+    font-weight: 600;
+}
+
+.separator {
+  width: 100%;
+  margin: 10px auto;
+  border: 0;
+  border-top: 1px solid #303031;
+}
+
+.width-90 {
+    width: 90%;
+}
+
+.links-container {
+  flex-grow: 1;
+}
+
+.logo-container, .links-container {
+  padding-left: 20px;
+}
+
+.side-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-nav ul li, .logo-container {
+  margin: 20px 0;
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.side-nav ul li a {
+  color: #747475;
+  text-decoration: none;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.side-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+  fill: #747475; /* Set the fill color to match the text color */
+  stroke: #747475; /* Set the stroke color to match the text color */
+}
+
+.logo-icon {
+  margin-right: 0.5rem;
+}
+
+.bottom-container {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-username {
+  font-weight: bold;
+  color: #fff;
+}
+
+.profile-email {
+  font-size: 0.875rem;
+  color: #747475;
+}

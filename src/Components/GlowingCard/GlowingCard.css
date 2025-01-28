@@ -1,0 +1,138 @@
+.card-container {
+  position: relative;
+  width: auto;
+  height: auto;
+  perspective: 1000px; /* Add perspective to the container */
+  transition: width 0.6s, height 0.6s; /* Add transition for width and height */
+}
+
+.card {
+  min-width: 400px; /* Increased width */
+  height: auto; /* Increased height */
+  padding: 40px 20px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  box-shadow: 0 0 30px rgba(128, 0, 128, 0.5);
+  border-radius: 10px;
+  overflow: hidden; /* Change this to hidden */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  transition: box-shadow 0.3s ease, transform 0.6s; /* Add transition for transform */
+  transform-style: preserve-3d; /* Preserve 3D for child elements */
+}
+
+.card.flipped {
+  transform: rotateY(180deg); /* Flip the card */
+}
+
+.card.flipped .signup-form {
+  transform: rotateY(180deg); /* Rotate the SignupForm content */
+}
+
+.card:hover {
+  box-shadow: 0 0 40px rgba(128, 0, 128, 1);
+}
+
+.circle {
+  width: var(--circle-size);
+  height: var(--circle-size);
+  background: radial-gradient(circle, rgba(128, 0, 128, 1) 0%, rgba(128, 0, 128, 0) 100%); /* Circular gradient */
+  border-radius: 50%;
+  position: absolute;
+  top: -10px; 
+  left: -10px; 
+  Z-index: 10;
+  animation: moveRectangle var(--animation-duration) linear infinite;
+}
+
+@keyframes moveRectangle {
+  0% {
+    top: -10px;
+    left: -10px; 
+  }
+  25% {
+    top: -10px;
+    left: calc(100% - var(--circle-size) + 10px);
+  }
+  50% {
+    top: calc(100% - var(--circle-size) + 10px);
+    left: calc(100% - var(--circle-size) + 10px);
+  }
+  75% {
+    top: calc(100% - var(--circle-size) + 10px);
+    left: -10px;
+  }
+  100% {
+    top: -10px;
+    left: -10px;
+  }
+}
+
+body {
+  background-color: #121212; /* Dark mode background for the entire page */
+}
+
+.login-form, .signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.login-form h2, .signup-form h2 {
+  margin-bottom: 20px;
+  font-family: 'Tenor Sans', sans-serif;
+}
+
+.login-form input, .signup-form input {
+  width: 80%;
+  padding: 10px;
+  color: #000;
+  margin: 15px 0; /* Increased margin */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form button, .signup-form button {
+  width: 50%;
+  padding: 10px;
+  background-color: #800080;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px; /* Add margin to create spacing between buttons */
+}
+
+.login-form button:hover, .signup-form button:hover {
+  background-color: #a000a0;
+}
+
+.signup-form {
+  transform: rotateY(180deg); /* Rotate the SignupForm content */
+}
+
+.flip-button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #800080;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.flip-button:hover {
+  background-color: #a000a0;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
