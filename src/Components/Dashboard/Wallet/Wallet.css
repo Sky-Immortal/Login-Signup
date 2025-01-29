@@ -1,0 +1,158 @@
+.wallet-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9; /* Example background color */
+  border-radius: 8px;
+  border: 1px solid darkgray; /* Add dark gray outline */
+}
+
+.wallet-text-container {
+  display: flex;
+  justify-content: space-between; /* Add space between left and right containers */
+  margin-bottom: 20px;
+}
+
+.left-wallet-text {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.left-wallet-text h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 10px; /* Add space between h2 and p */
+}
+
+.left-wallet-text p {
+  color: darkgray;
+  font-size: 1rem;
+}
+
+.right-wallet-text {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; /* Add padding around the icon */
+  border: 1px solid darkgray; /* Add a little outline */
+  border-radius: 4px; /* Add border radius */
+  margin-left: 10px; /* Add space between icon containers */
+}
+
+.arrow-icon {
+  font-size: 1rem;
+  color: darkgray; /* Make the icon lighter */
+}
+
+.wallet-card-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add a gap between wallet cards */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInReverse {
+    from {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutReverse {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+}
+
+.wallet-card {
+    border-radius: 20px;
+    width: 450px; /* Set width to 3/4 of the container */
+    height: calc(450px / 1.8); /* Set height to half of the width */
+    background-size: cover; /* Ensure the background image covers the entire card */
+    background-position: center; /* Center the background image */
+    position: relative; /* Add relative positioning */
+    animation-duration: 0.5s; /* Set animation duration */
+    animation-fill-mode: forwards; /* Ensure the animation stays in the end state */
+}
+
+.slide-in {
+    animation-name: slideIn;
+}
+
+.slide-in-reverse {
+    animation-name: slideInReverse;
+}
+
+.slide-out {
+    animation-name: slideOut;
+}
+
+.slide-out-reverse {
+    animation-name: slideOutReverse;
+}
+
+.card-number {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+    color: white;
+    animation-duration: 0.5s; /* Set animation duration */
+    animation-fill-mode: forwards; /* Ensure the animation stays in the end state */
+}
+
+.card-number-text {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    font-size: 0.8rem;
+    color: white;
+    animation-duration: 0.5s; /* Set animation duration */
+    animation-fill-mode: forwards; /* Ensure the animation stays in the end state */
+}
+
+.wallet-card-content {
+  padding: 20px;
+}
+
+.vertical-line {
+  width: 1px;
+  background-color: darkgray;
+  height: 100%;
+}

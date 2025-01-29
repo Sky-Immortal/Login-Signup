@@ -1,0 +1,45 @@
+.analytics-wrapper {
+    display: flex;
+    justify-content: space-between; /* Display items in a row */ /* Add a gap of 10px between items */
+}
+
+.analytics-container {
+  display: flex;
+  width: 100%;
+  max-width: 250px; /* Limit the width to 200px */
+  padding: 20px;
+  background-color: #f9f9f9; /* Example background color */
+  border-radius: 8px;
+  border: 1px solid darkgray; /* Add dark gray outline */
+  font-size: 0.7rem;
+}
+
+.text-container {
+  flex: 3; /* Takes 3/4 of the container */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.middle-text {
+  font-size: 1.2rem; /* Set font size to 1.5rem */
+  font-weight: 600; /* Set font weight to bold */
+}
+
+.icon-container {
+  flex: 1; /* Takes 1/4 of the container */
+  display: flex;
+  align-items: flex-end; /* Align items at the bottom */
+  justify-content: space-between;
+}
+
+.chart-icon {
+  font-size: 1.5rem; /* Set icon size to 8px by 8px */
+  color: green; /* Set icon color to green */
+  margin-right: 10px;
+}
+
+.icon-text {
+  align-self: flex-end; /* Align text at the bottom */
+  color: green; /* Set text color to green */
+}

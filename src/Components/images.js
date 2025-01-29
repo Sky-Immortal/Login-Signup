@@ -44,7 +44,9 @@ const images = {
     //youngs favourite
     youngsfav1: require('../Images/Youngs Fav/Youngsfav-1.png'),
     youngsfav2: require('../Images/Youngs Fav/youngsfav-2.png'),
-    // Add more images as needed
+
+    //dashboard cards
+    card: require('../Images/Dashboard cards/Card.png'),
 };
 
 export default images;
