@@ -57,9 +57,8 @@ const Dashboard = () => {
           <div className="stats-container">
             <div className="column">
               <Analytics />
-              <div className="row">
-                <Wallet /> {/* Use Wallet component here */}
-              </div>
+              <Wallet />
+              
               <div className="row">Row 3</div>
             </div>
             <div className="column">

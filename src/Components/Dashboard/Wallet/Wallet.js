@@ -5,6 +5,8 @@ import images from '../../images'; // Import images
 
 const Wallet = () => {
     const cardNumbers = ["**** **** **** 1234", "**** **** **** 5678", "**** **** **** 9101"];
+    const balances = ["$1000", "$2000", "$3000"]; // Example balances
+    const currencies = ["USD", "EUR", "GBP"]; // Example currencies
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const [isSliding, setIsSliding] = useState(false);
     const [slideDirection, setSlideDirection] = useState('slide-in');
@@ -35,7 +37,7 @@ const Wallet = () => {
         <div className="wallet-container">
             <div className="wallet-text-container">
                 <div className="left-wallet-text">
-                    <h2>My Wallet</h2>
+                    <h2>Wallet</h2>
                     <p>Card | {currentCardIndex + 1} out of {cardNumbers.length}</p>
                 </div>
                 <div className="right-wallet-text">
@@ -54,7 +56,20 @@ const Wallet = () => {
                 </div>
                 <div className="vertical-line"></div>
                 <div className="wallet-card-content">
-                    
+                    <div className="balance-container">
+                        <div className="balance-text">
+                            <p>Balance</p>
+                            <h2>{balances[currentCardIndex]}</h2>
+                        </div>
+                        <div className="currency-text">
+                            <p>Currency</p>
+                            <h2>{currencies[currentCardIndex]}</h2>
+                        </div>
+                    </div>
+                    <div className="deactivate-container">
+                        <div className="deactivate-text">Deactivate Card</div>
+                        <input type="checkbox" className="toggle-switch" />
+                    </div>
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@
   background-color: #f9f9f9; /* Example background color */
   border-radius: 8px;
   border: 1px solid darkgray; /* Add dark gray outline */
+  margin: 10px 0;
 }
 
 .wallet-text-container {
@@ -22,7 +23,7 @@
 .left-wallet-text h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: 10px; /* Add space between h2 and p */
+  margin-right: 30px; /* Add space between h2 and p */
 }
 
 .left-wallet-text p {
@@ -43,6 +44,18 @@
   border: 1px solid darkgray; /* Add a little outline */
   border-radius: 4px; /* Add border radius */
   margin-left: 10px; /* Add space between icon containers */
+}
+
+.icon-container.active .arrow-icon {
+  color: black; /* Change icon color to black when active */
+}
+
+.icon-container:hover {
+  border-color: black; /* Change outline to black on hover */
+}
+
+.icon-container:hover .arrow-icon {
+  color: black; /* Change icon color to black on hover */
 }
 
 .arrow-icon {
@@ -149,6 +162,61 @@
 
 .wallet-card-content {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add gap between the containers */
+}
+
+.balance-text, .currency-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  color: darkgray;
+
+}
+
+.balance-text h2, .currency-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.deactivate-text {
+  font-size: 1rem;
+  color: darkgray;
+  margin-bottom: 10px;
+}
+
+.toggle-switch {
+  width: 60px;
+  height: 30px;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+}
+
+.toggle-switch:checked {
+  background-color: #baa7ff;
+}
+
+.toggle-switch:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 25px;
+  height: 25px;
+  background-color: #5F1ED9;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.toggle-switch:checked:before {
+  transform: translateX(28px);
 }
 
 .vertical-line {
