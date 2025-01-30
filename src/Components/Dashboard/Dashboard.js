@@ -6,6 +6,7 @@ import { FiPlus } from 'react-icons/fi'; // Import a lighter plus icon
 import images from '../images'; // Import images
 import Analytics from './Analytics/Analytics'; // Import Analytics component
 import Wallet from './Wallet/Wallet'; // Import Wallet component
+import Statistics from './Statistics/Statistics'; // Import Statistics component
 
 const Dashboard = () => {
   const [isBoxVisible, setIsBoxVisible] = useState(false);
@@ -53,13 +54,12 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="stats-container">
             <div className="column">
               <Analytics />
               <Wallet />
-              
-              <div className="row">Row 3</div>
+              <Statistics /> {/* Add Statistics component */}
             </div>
             <div className="column">
               <div className="row">Row 1</div>

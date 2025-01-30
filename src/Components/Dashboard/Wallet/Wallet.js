@@ -10,6 +10,7 @@ const Wallet = () => {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const [isSliding, setIsSliding] = useState(false);
     const [slideDirection, setSlideDirection] = useState('slide-in');
+    const [isCardDeactivated, setIsCardDeactivated] = useState(false);
 
     const handleNextCard = () => {
         if (!isSliding) {
@@ -33,24 +34,28 @@ const Wallet = () => {
         }
     };
 
+    const handleToggleChange = () => {
+        setIsCardDeactivated(!isCardDeactivated);
+    };
+
     return (
-        <div className="wallet-container">
+        <div className="wallet-container outer-container margin-space">
             <div className="wallet-text-container">
                 <div className="left-wallet-text">
                     <h2>Wallet</h2>
                     <p>Card | {currentCardIndex + 1} out of {cardNumbers.length}</p>
                 </div>
                 <div className="right-wallet-text">
-                    <div className="icon-container" onClick={handlePrevCard}>
+                    <div className={`wallet-icon-container ${isCardDeactivated ? 'disabled' : ''}`} onClick={handlePrevCard}>
                         <FiChevronLeft className="arrow-icon" />
                     </div>
-                    <div className="icon-container" onClick={handleNextCard}>
+                    <div className={`wallet-icon-container ${isCardDeactivated ? 'disabled' : ''}`} onClick={handleNextCard}>
                         <FiChevronRight className="arrow-icon" />
                     </div>
                 </div>
             </div>
             <div className="wallet-card-container">
-                <div className={`wallet-card ${isSliding ? slideDirection : ''}`} style={{ backgroundImage: `url(${images.card})` }}>
+                <div className={`wallet-card ${isSliding ? slideDirection : ''} ${isCardDeactivated ? 'deactivated' : ''}`} style={{ backgroundImage: `url(${images.card})`, filter: isCardDeactivated ? 'grayscale(100%)' : 'none' }}>
                     <div className={`card-number ${isSliding ? slideDirection : ''}`}>{cardNumbers[currentCardIndex]}</div>
                     <div className={`card-number-text ${isSliding ? slideDirection : ''}`}>Card Number</div>
                 </div>
@@ -68,7 +73,7 @@ const Wallet = () => {
                     </div>
                     <div className="deactivate-container">
                         <div className="deactivate-text">Deactivate Card</div>
-                        <input type="checkbox" className="toggle-switch" />
+                        <input type="checkbox" className="toggle-switch" onChange={handleToggleChange} />
                     </div>
                 </div>
             </div>

@@ -1,12 +1,7 @@
+@import url('../Dashboard.css'); 
+
 .wallet-container {
-  display: flex;
-  width: 100%;
   flex-direction: column;
-  padding: 20px;
-  background-color: #f9f9f9; /* Example background color */
-  border-radius: 8px;
-  border: 1px solid darkgray; /* Add dark gray outline */
-  margin: 10px 0;
 }
 
 .wallet-text-container {
@@ -36,31 +31,31 @@
   align-items: center; /* Align items vertically in the center */
 }
 
-.icon-container {
+.wallet-icon-container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px; /* Add padding around the icon */
-  border: 1px solid darkgray; /* Add a little outline */
+  border: 1px solid #EAEAEA; /* Add a little outline */
   border-radius: 4px; /* Add border radius */
   margin-left: 10px; /* Add space between icon containers */
 }
 
-.icon-container.active .arrow-icon {
+.wallet-icon-container.active .arrow-icon {
   color: black; /* Change icon color to black when active */
 }
 
-.icon-container:hover {
+.wallet-icon-container:hover {
   border-color: black; /* Change outline to black on hover */
 }
 
-.icon-container:hover .arrow-icon {
+.wallet-icon-container:hover .arrow-icon {
   color: black; /* Change icon color to black on hover */
 }
 
 .arrow-icon {
   font-size: 1rem;
-  color: darkgray; /* Make the icon lighter */
+  color: #a0a0a0; /* Make the icon lighter */
 }
 
 .wallet-card-container {
@@ -124,6 +119,11 @@
     animation-fill-mode: forwards; /* Ensure the animation stays in the end state */
 }
 
+.wallet-card.deactivated {
+    position: relative;
+    filter: grayscale(100%); /* Turn the background image white and black */
+}
+
 .slide-in {
     animation-name: slideIn;
 }
@@ -172,19 +172,19 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 10px;
-  color: darkgray;
+  color: #747475;
 
 }
 
 .balance-text h2, .currency-text h2 {
   font-size: 2rem;
   font-weight: bold;
-  color: black;
+  color: #303031;
 }
 
 .deactivate-text {
   font-size: 1rem;
-  color: darkgray;
+  color: #747475;
   margin-bottom: 10px;
 }
 
@@ -192,7 +192,7 @@
   width: 60px;
   height: 30px;
   appearance: none;
-  background-color: #fff;
+  background-color: #eaeaea;
   border-radius: 20px;
   position: relative;
   outline: none;
@@ -223,4 +223,9 @@
   width: 1px;
   background-color: darkgray;
   height: 100%;
+}
+
+.wallet-icon-container.disabled {
+    pointer-events: none; /* Disable button clicks */
+    opacity: 0.5; /* Dim the buttons */
 }

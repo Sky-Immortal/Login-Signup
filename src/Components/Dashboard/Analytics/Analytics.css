@@ -1,16 +1,13 @@
+@import url('../Dashboard.css');
+
 .analytics-wrapper {
     display: flex;
-    justify-content: space-between; /* Display items in a row */ /* Add a gap of 10px between items */
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .analytics-container {
-  display: flex;
-  width: 100%;
-  max-width: 250px; /* Limit the width to 200px */
-  padding: 20px;
-  background-color: #f9f9f9; /* Example background color */
-  border-radius: 8px;
-  border: 1px solid darkgray; /* Add dark gray outline */
+  max-width: 250px;
   font-size: 0.7rem;
 }
 
@@ -34,8 +31,8 @@
 }
 
 .chart-icon {
-  font-size: 1.5rem; /* Set icon size to 8px by 8px */
-  color: green; /* Set icon color to green */
+  font-size: 1.5rem;
+  color: green;
   margin-right: 10px;
 }
 
